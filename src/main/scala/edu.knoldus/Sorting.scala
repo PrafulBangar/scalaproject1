@@ -42,7 +42,22 @@ class Sorting {
 
 }
 
-  def selectionSort(list: List[Int]) : List[Int]={
+  def selectionSort(list: List[Int]): List[Int] = {
 
-  }
+    val intArray: Array[Int] = list.toArray
+    for (i <- 0 to intArray.length - 1) {
+
+      var min =i;
+      for (j<- i+1 to intArray.length - 1) {
+        if(intArray(j)<intArray(min))
+          {min=j;}
+      }
+      var tmp=intArray(i)
+      intArray(i)=intArray(min)
+      intArray(min)=tmp;
+    }
+intArray.toList
+
+}
+}
 
