@@ -22,23 +22,8 @@ class Sorting {
     intArray.toList
   }
 
-/*
-  def selectionSort(list: List[Int]): List[Int] = {
-    def selectMinimum(list: List[Int], accumList: List[Int] = List[Int]()): List[Int] = {
 
-      list match {
-        case Nil => accumList
-        case _ => {
-          val min = list.min
-          val requiredList = list.filter(_ != min)
-          selectMinimum(requiredList, accumList ::: List.fill(list.length - requiredList.length)(min))
-        }
-      }
-    }
 
-    selectMinimum(list)
-  }
-*/
 
   def selectionSort(list: List[Int]): List[Int] = {
 
