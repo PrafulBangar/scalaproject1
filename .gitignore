@@ -1,4 +1,4 @@
 /target/*
-/Idea/*
+/.idea/*
 *.xml
 *./iml

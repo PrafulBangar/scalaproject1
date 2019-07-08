@@ -43,34 +43,20 @@ class Sorting {
   def selectionSort(list: List[Int]): List[Int] = {
 
     val intArray: Array[Int] = list.toArray
+    for (i <- 0 to intArray.length - 1) {
 
-    def swap(list: Array[Int], i: Int, j: Int) {
-    var tmp = list(i)
-    list(i) = list(j)
-    list(j) = tmp
-    //  intArray.toList
-  }
-
-    var i = 0
-    while(i < (list.length - 1)) {
-    var min = i
-    var j = i + 1
-
-    while (j < list.length) {
-    if(list(j) < list(min)) {
-    min = j
-  }
-    j += 1
-  }
-
-    swap(list.toArray, i, min)
- i += 1
-//intArray.toList
-  }
+      var min =i;
+      for (j<- i+1 to intArray.length - 1) {
+        if(intArray(j)<intArray(min))
+          {min=j;}
+      }
+      var tmp=intArray(i)
+      intArray(i)=intArray(min)
+      intArray(min)=tmp;
+    }
 intArray.toList
 
   }
-
 
   def bubbleSort(list: List[Int]): List[Int] = {
     val intArray: Array[Int] = list.toArray
