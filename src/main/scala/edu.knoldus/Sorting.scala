@@ -27,22 +27,7 @@ class Sorting {
     intArray.toList
   }
 
- def bubbleSort(list: List[Int]): List[Int] = {
-    val intArray: Array[Int] = list.toArray
-    for (i <- 0 to intArray.length - 1) {
-      for (j <- 0 until intArray.length-1-i) {
-        if (intArray(j) > intArray(j + 1)) {
-          val temp = intArray(j + 1)
-          intArray(j + 1) = intArray(j)
-          intArray(j) = temp
-        }
-      }
-     }
-    intArray.toList
-
-}
-
-  def selectionSort(list: List[Int]): List[Int] = {
+def selectionSort(list: List[Int]): List[Int] = {
 
     val intArray: Array[Int] = list.toArray
     for (i <- 0 to intArray.length - 1) {
@@ -57,6 +42,22 @@ class Sorting {
       intArray(min)=tmp;
     }
 intArray.toList
+
+  }
+
+  def bubbleSort(list: List[Int]): List[Int] = {
+    val intArray: Array[Int] = list.toArray
+    for (i <- 0 to intArray.length - 1) {
+      for (j <- 0 until intArray.length-1-i) {
+        if (intArray(j) > intArray(j + 1)) {
+          val temp = intArray(j + 1)
+          intArray(j + 1) = intArray(j)
+          intArray(j) = temp
+        }
+      }
+
+    }
+    intArray.toList
 
 }
 }
